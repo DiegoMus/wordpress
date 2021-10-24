@@ -18,8 +18,10 @@ services:
 
   db:
     image: mysql:5.7
-    container_name: wordpressweb
+    container_name: wordpressbd
     restart: always
+    ports:
+      - 3306:3306
     environment:
       MYSQL_DATABASE: exampledb
       MYSQL_USER: exampleuser
